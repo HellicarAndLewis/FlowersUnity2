@@ -66,14 +66,12 @@ public class TerrainFlowers : MonoBehaviour
     private fftAnalyzer fft;
     private int texRows = 3;
     private int texCols = 3;
-    private ShowController showControl;
 
 
     // --------------------------------------------------------------------------------------------------------
     //
     void Start()
     {
-        showControl = FindObjectOfType<ShowController>();
         fft = FindObjectOfType<fftAnalyzer>();
         Init();
     }
@@ -338,10 +336,6 @@ public class TerrainFlowers : MonoBehaviour
         if (particleMaterial)
         {
             Matrix4x4 m = transform.localToWorldMatrix;
-            Matrix4x4 v = Camera.current.worldToCameraMatrix;
-            Matrix4x4 p = Camera.current.projectionMatrix;
-            Matrix4x4 MVP = p * v * m;
-
             growFrom = growBounds.min;
             growTo = growBounds.max;
 

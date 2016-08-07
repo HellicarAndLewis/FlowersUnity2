@@ -114,14 +114,13 @@ public class onsetDetector : MonoBehaviour {
 
     float getConfidenceSmoothed(float newConfidence, float oldConfidence)
     {
-        float output;
         if (newConfidence > oldConfidence)
         {
-            return output = Mathf.Lerp(oldConfidence, newConfidence, attackUp);
+            return Mathf.Lerp(oldConfidence, newConfidence, attackUp);
         }
         else
         {
-            return output = Mathf.Lerp(oldConfidence, newConfidence, attackDown);
+            return Mathf.Lerp(oldConfidence, newConfidence, attackDown);
         }
     }
 

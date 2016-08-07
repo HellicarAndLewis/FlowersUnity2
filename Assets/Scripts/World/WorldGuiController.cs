@@ -7,24 +7,16 @@ public class WorldGuiController : MonoBehaviour
     public WorldCamerasController worldCams;
     public ShowController showControl;
 
-    // Use this for initialization
+
     void Start()
     {
         if (!showControl) showControl = FindObjectOfType<ShowController>();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void Reset(float value = 0)
     {
-        
-        //Terrain cam Controls
-        /*
-        Vector3 pos = TerrainCam.transform.position;
-        TerrainCam.transform.position = new Vector3(pos.x, TerrainCamHeight, pos.z);
-        TerrainCam.fieldOfView = TerrainCamFieldOfView;
-        SecondaryTerrainCam.transform.position = TerrainCam.transform.position;
-        SecondaryTerrainCam.fieldOfView = TerrainCam.fieldOfView;
-        */
+        worldCams.Reset(value);
+        showControl.GetActiveWorld().Reset(value);
     }
 
     public void OnTerrainCamHeight(float value)

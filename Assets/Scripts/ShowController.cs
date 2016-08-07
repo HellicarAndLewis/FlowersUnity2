@@ -15,6 +15,7 @@ public class ShowController : MonoBehaviour
 {
     public SceneFadeInOut[] scenes;
     public GameObject commonWorld;
+    public WorldGuiController worldGui;
 
     public ShowMode showMode = ShowMode.World_1;
     private ShowMode queuedShowMode = ShowMode.World_1;
@@ -104,6 +105,7 @@ public class ShowController : MonoBehaviour
 
         if (sceneIndex > 3)
         {
+            worldGui.Reset();
             commonWorld.SetActive(true);
         }
         else

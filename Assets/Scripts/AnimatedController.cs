@@ -7,8 +7,6 @@ public class AnimatedController : MonoBehaviour
     [Range(0, 1)]
     public float normalisedTime = 0;
     public float duration = 30;
-
-    private bool loop = false;
     protected Animator animator;
 
     // --------------------------------------------------------------------------------------------------------

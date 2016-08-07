@@ -3,17 +3,21 @@ using System.Collections;
 
 public class WorldController : MonoBehaviour
 {
+    public float lerpAmount = 0.1f;
 
     public GroundRotator ground;
     public float GroundSpeedMin = 0;
     public float GroundSpeedMax = 1;
-    
+    private float GroundSpeedTarget = 1;
+
     public Light worldLight;
     public float IntensityMin = 0;
     public float IntensityMax = 1;
-    public float LightRotMin = -75;
-    public float LightRotMax = -25;
-    
+    private float IntensityTarget = 1;
+    public Vector3 LightRotMin;
+    public Vector3 LightRotMax;
+    private Quaternion LightRotTarget;
+
     // Use this for initialization
     void Start()
     {
@@ -23,21 +27,38 @@ public class WorldController : MonoBehaviour
             worldLight = gameObject.GetComponentInChildren<Light>();
     }
 
+    void Update()
+    {
+        // ground speed
+        if (ground) ground.speedX = Mathf.Lerp(ground.speedX, MathUtils.Map(GroundSpeedTarget, 0, 1, GroundSpeedMin, GroundSpeedMax, true), lerpAmount);
+
+        // light intensity
+        worldLight.intensity = Mathf.Lerp(worldLight.intensity, MathUtils.Map(IntensityTarget, 0, 1, IntensityMin, IntensityMax, true), lerpAmount);
+
+        // light rotation
+        var rot = worldLight.transform.localRotation;
+        rot = Quaternion.Lerp(rot, LightRotTarget, lerpAmount);
+        worldLight.transform.localRotation = rot;
+    }
+
+    public void Reset(float value = 0)
+    {
+        SetLightIntenseNorm(value);
+        SetLightRotNorm(value);
+    }
+
     public void SetGroundSpeedNorm(float value)
     {
-        ground.speedX = MathUtils.Map(value, 0, 1, GroundSpeedMin, GroundSpeedMax, true);
+        GroundSpeedTarget = MathUtils.Map(value, 0, 1, GroundSpeedMin, GroundSpeedMax, true);
     }
 
     public void SetLightIntenseNorm(float value)
     {
-        worldLight.intensity = MathUtils.Map(value, 0, 1, IntensityMin, IntensityMax, true);
+        IntensityTarget = MathUtils.Map(value, 0, 1, IntensityMin, IntensityMax, true);
     }
 
     public void SetLightRotNorm(float value)
     {
-        var rot = worldLight.transform.localRotation;
-        var euler = rot.eulerAngles;
-        rot.eulerAngles = new Vector3(MathUtils.Map(value, 0, 1, LightRotMin, LightRotMax, true), euler.y, euler.z);
-        worldLight.transform.localRotation = rot;
+        LightRotTarget = Quaternion.Euler(Vector3.Lerp(LightRotMin, LightRotMax, value));
     }
 }

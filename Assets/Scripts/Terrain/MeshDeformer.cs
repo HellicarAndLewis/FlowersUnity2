@@ -224,19 +224,18 @@ public class MeshDeformer : MonoBehaviour
 
         Vector3[] vertices = mesh.vertices;
         int i = 0;
-        float scaledTime = CaptureTime.Elapsed * timeScale;
         while (i < vertices.Length)
         {
             var growthPos = transform.localToWorldMatrix.MultiplyPoint(vertices[i]);
             var scale = 0.0f;
+            /*
             bool isGrowing = (
                             (growthPos.x > growFrom.x && growthPos.x < growTo.x) &&
                             (growthPos.y > growFrom.y && growthPos.y < growTo.y) &&
                             (growthPos.z > growFrom.z && growthPos.z < growTo.z)
                             );
-
+                            */
             scale = MathUtils.Map(growthPos.z, growFrom.z, growTo.z, 0, 1, true);
-            //scale *= MathUtils.Map(growthPos.y, growFrom.y, growTo.y, 0, 1, true);
 
             vertices[i] = baseVertices[i];
             var low = baseVertices[i].normalized * 40;

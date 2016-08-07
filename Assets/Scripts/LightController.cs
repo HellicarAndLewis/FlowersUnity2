@@ -21,9 +21,6 @@ public class LightController : AnimatedController
 
 	public float progress = 1;
 	public float transitionElapsed = 0;
-	private LightPreset current = new LightPreset();
-	private LightPreset previous;
-	private LightPreset target;
 
     public onsetDetector onset;
 
@@ -51,9 +48,7 @@ public class LightController : AnimatedController
         // Night
         if (presets[3] == null)
             presets[3] = new LightPreset() { colour = Color.black, eulerAngle = new Vector3(0, 80, 0) };
-
-        previous = presets[0];
-		target = presets[0];
+        
 		Preset(TerrainMode.Daytime);
 	}
 
@@ -89,9 +84,6 @@ public class LightController : AnimatedController
 	//
 	public void Preset(TerrainMode mode, float duration = -1)
 	{
-		var index = (int)mode;
-		previous = new LightPreset(){colour = current.colour, eulerAngle = current.eulerAngle };
-		target = presets[index];
 		transitionElapsed = 0;
 		if(duration > -1)
 			transitionTime = duration;

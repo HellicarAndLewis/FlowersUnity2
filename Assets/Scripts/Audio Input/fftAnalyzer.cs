@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class fftAnalyzer : MonoBehaviour
 {
-    private int audioSampleRate = 44100;
     private int samples = 256;
     public float[] spectrum;
     public float[] spectrumBinned;
