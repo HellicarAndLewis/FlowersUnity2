@@ -75,6 +75,20 @@ public class ShowController : MonoBehaviour
         ToggleScenes();
     }
 
+    public WorldController GetActiveWorld()
+    {
+        int sceneIndex = (int)showMode;
+        if (sceneIndex > 3)
+        {
+            var world = scenes[sceneIndex].gameObject.GetComponent<WorldController>();
+            return world;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
     // --------------------------------------------------------------------------------------------------------
     //
     public void ToggleScenes()
