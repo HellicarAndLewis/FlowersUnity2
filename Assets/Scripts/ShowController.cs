@@ -49,9 +49,8 @@ public class ShowController : MonoBehaviour
 
     void Update()
 	{
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            Debug.Log("control");
             if (Input.GetKeyDown("q")) GoToMode(ShowMode.Nsdos);
             if (Input.GetKeyDown("w")) GoToMode(ShowMode.Blank);
             if (Input.GetKeyDown("e")) GoToMode(ShowMode.Rock);

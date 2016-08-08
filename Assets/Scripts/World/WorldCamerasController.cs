@@ -29,7 +29,6 @@ public class WorldCamerasController : MonoBehaviour
 
     public void Reset(float value = 0)
     {
-        SetNormHeight(value);
     }
 
     void Update()
