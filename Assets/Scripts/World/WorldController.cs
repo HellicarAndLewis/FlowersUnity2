@@ -17,20 +17,28 @@ public class WorldController : MonoBehaviour
     public Vector3 LightRotMin;
     public Vector3 LightRotMax;
     private Quaternion LightRotTarget;
-    //Sky Transparency
+    // Sky Transparency
     public TransparencyController SkyTransparencyController;
     public float SkyTransparencyMin;
     public float SkyTransparencyMax;
-    public float SkyTransparencyTarget;
-    //Ground Brightness
+    float SkyTransparencyTarget;
+    // Ground Brightness
     public GroundDarknessController GroundBrightnessController;
     public float GroundBrightnessMin;
     public float GroundBrightnessMax;
-    public float GroundBrightnessTarget;
+    float GroundBrightnessTarget;
     // Ground Emissive
     public float EmissiveMin;
     public float EmissiveMax;
     public float EmissiveTarget;
+    // Sky Color
+    public float SkyHueMin;
+    public float SkyHueMax;
+    float SkyHueTarget;
+    // Sky Color
+    public float SkySatMin;
+    public float SkySatMax;
+    float SkySatTarget;
 
 
     // Use this for initialization
@@ -59,6 +67,8 @@ public class WorldController : MonoBehaviour
         if(SkyTransparencyController)
         {
             SkyTransparencyController.alpha = Mathf.Lerp(SkyTransparencyController.alpha, SkyTransparencyTarget, lerpAmount);
+            SkyTransparencyController.hue = Mathf.Lerp(SkyTransparencyController.hue, SkyHueTarget, lerpAmount);
+            SkyTransparencyController.saturation = Mathf.Lerp(SkyTransparencyController.hue, SkyHueTarget, lerpAmount);
         }
 
         if(GroundBrightnessController)
@@ -106,7 +116,22 @@ public class WorldController : MonoBehaviour
         }
     }
 
-    
+    public void SetVideoHue(float value)
+    {
+        if (SkyTransparencyController)
+        {
+            SkyHueTarget = MathUtils.Map(value, 0, 1, SkyHueMin, SkyHueMax);
+        }
+    }
+
+    public void SetVideoSaturation(float value)
+    {
+        if (SkyTransparencyController)
+        {
+            SkySatTarget = MathUtils.Map(value, 0, 1, SkySatMin, SkySatMax);
+        }
+    }
+
     public void SetGroundEmissive(float value)
     {
         if (GroundBrightnessController)
