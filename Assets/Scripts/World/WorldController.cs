@@ -7,27 +7,27 @@ public class WorldController : MonoBehaviour
 
     public GroundRotator ground;
     public float GroundSpeedMin = 0;
-    public float GroundSpeedMax = 1;
-    private float GroundSpeedTarget = 1;
+    public float GroundSpeedMax = 0.5f;
+    public float GroundSpeedTarget = 0.1f;
     public int GroundSpeedDirection = 1;
 
     public Light worldLight;
     public float IntensityMin = 0;
     public float IntensityMax = 1;
-    private float IntensityTarget = 1;
+    public float IntensityTarget = 1;
     public Vector3 LightRotMin;
     public Vector3 LightRotMax;
-    private Quaternion LightRotTarget;
+    public Quaternion LightRotTarget;
     // Sky Transparency
     public TransparencyController SkyTransparencyController;
     public float SkyTransparencyMin;
     public float SkyTransparencyMax;
-    float SkyTransparencyTarget;
+    public float SkyTransparencyTarget;
     // Ground Brightness
     public GroundDarknessController GroundBrightnessController;
     public float GroundBrightnessMin;
     public float GroundBrightnessMax;
-    float GroundBrightnessTarget;
+    public float GroundBrightnessTarget;
     // Ground Emissive
     public float EmissiveMin;
     public float EmissiveMax;
@@ -35,11 +35,16 @@ public class WorldController : MonoBehaviour
     // Sky Color
     public float SkyHueMin;
     public float SkyHueMax;
-    float SkyHueTarget;
+    public float SkyHueTarget;
     // Sky Color
     public float SkySatMin;
     public float SkySatMax;
-    float SkySatTarget;
+    public float SkySatTarget;
+
+    public WorldCamerasController worldCam;
+    //public float camMinHeight = 36;
+    //public float camMaxHeight = 42;
+    public float camTargetHeight = -999;
 
 
     // Use this for initialization
@@ -49,6 +54,7 @@ public class WorldController : MonoBehaviour
             ground = gameObject.GetComponentInChildren<GroundRotator>();
         if (!worldLight)
             worldLight = gameObject.GetComponentInChildren<Light>();
+        worldCam = FindObjectOfType<WorldCamerasController>();
     }
 
     void Update()
@@ -82,9 +88,7 @@ public class WorldController : MonoBehaviour
     public void Reset(float value = 0)
     {
         GetComponent<SkyboxController>().UpdateMaterial();
-        SetGroundSpeedNorm(value);
-        SetLightIntenseNorm(value);
-        SetLightRotNorm(value);
+        if (camTargetHeight != -999) FindObjectOfType<WorldCamerasController>().targetHeight = camTargetHeight;
     }
 
     public void SetGroundSpeedNorm(float value)
