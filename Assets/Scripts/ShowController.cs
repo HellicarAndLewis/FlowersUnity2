@@ -3,7 +3,7 @@ using System.Collections;
 
 public enum ShowMode
 {
-    Nsdos=0, Blank, Rock, Logo, World_1, World_2, Null
+    Nsdos=0, Blank, Rock, Logo, World_1, World_2, World_3, World_4, World_5, World_6, World_7, World_8, World_9, Null
 }
 
 public enum TerrainMode
@@ -16,6 +16,7 @@ public class ShowController : MonoBehaviour
     public SceneFadeInOut[] scenes;
     public GameObject commonWorld;
     public WorldGuiController worldGui;
+    public bool midiControlled = false;
 
     public ShowMode showMode = ShowMode.World_1;
     private ShowMode queuedShowMode = ShowMode.World_1;
@@ -48,12 +49,23 @@ public class ShowController : MonoBehaviour
 
     void Update()
 	{
-        if (Input.GetKeyDown("q")) GoToMode(ShowMode.Nsdos);
-        if (Input.GetKeyDown("w")) GoToMode(ShowMode.Blank);
-        if (Input.GetKeyDown("e")) GoToMode(ShowMode.Rock);
-        if (Input.GetKeyDown("r")) GoToMode(ShowMode.Logo);
-        if (Input.GetKeyDown("t")) GoToMode(ShowMode.World_1);
-        if (Input.GetKeyDown("y")) GoToMode(ShowMode.World_2);
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            Debug.Log("control");
+            if (Input.GetKeyDown("q")) GoToMode(ShowMode.Nsdos);
+            if (Input.GetKeyDown("w")) GoToMode(ShowMode.Blank);
+            if (Input.GetKeyDown("e")) GoToMode(ShowMode.Rock);
+            if (Input.GetKeyDown("r")) GoToMode(ShowMode.Logo);
+            if (Input.GetKeyDown("a")) GoToMode(ShowMode.World_1);
+            if (Input.GetKeyDown("s")) GoToMode(ShowMode.World_2);
+            if (Input.GetKeyDown("d")) GoToMode(ShowMode.World_3);
+            if (Input.GetKeyDown("f")) GoToMode(ShowMode.World_4);
+            if (Input.GetKeyDown("g")) GoToMode(ShowMode.World_5);
+            if (Input.GetKeyDown("h")) GoToMode(ShowMode.World_6);
+            if (Input.GetKeyDown("j")) GoToMode(ShowMode.World_7);
+            if (Input.GetKeyDown("k")) GoToMode(ShowMode.World_8);
+            if (Input.GetKeyDown("l")) GoToMode(ShowMode.World_9);
+        }
     }
     
     // --------------------------------------------------------------------------------------------------------
@@ -69,6 +81,17 @@ public class ShowController : MonoBehaviour
         }
         
     }
+
+    public void ToggleMidiControl()
+    {
+        midiControlled = !midiControlled;
+        var controls = FindObjectsOfType<SliderController>();
+        foreach (var control in controls)
+        {
+            control.midiControlled = midiControlled;
+        }
+    }
+
     // --------------------------------------------------------------------------------------------------------
     //
     private void OnSceneFadeOut()
@@ -142,5 +165,37 @@ public class ShowController : MonoBehaviour
     {
         GoToMode(ShowMode.World_1);
     }
-    
+    public void GoWorld2()
+    {
+        GoToMode(ShowMode.World_2);
+    }
+    public void GoWorld3()
+    {
+        GoToMode(ShowMode.World_3);
+    }
+    public void GoWorld4()
+    {
+        GoToMode(ShowMode.World_4);
+    }
+    public void GoWorld5()
+    {
+        GoToMode(ShowMode.World_5);
+    }
+    public void GoWorld6()
+    {
+        GoToMode(ShowMode.World_6);
+    }
+    public void GoWorld7()
+    {
+        GoToMode(ShowMode.World_7);
+    }
+    public void GoWorld8()
+    {
+        GoToMode(ShowMode.World_8);
+    }
+    public void GoWorld9()
+    {
+        GoToMode(ShowMode.World_9);
+    }
+
 }

@@ -17,6 +17,16 @@ public class WorldController : MonoBehaviour
     public Vector3 LightRotMin;
     public Vector3 LightRotMax;
     private Quaternion LightRotTarget;
+    //Sky Transparency
+    public TransparencyController SkyTransparencyController;
+    public float SkyTransparencyMin;
+    public float SkyTransparencyMax;
+    public float SkyTransparencyTarget;
+    //Ground Brightness
+    public GroundDarknessController GroundBrightnessController;
+    public float GroundBrightnessMin;
+    public float GroundBrightnessMax;
+    public float GroundBrightnessTarget;
 
     // Use this for initialization
     void Start()
@@ -39,6 +49,17 @@ public class WorldController : MonoBehaviour
         var rot = worldLight.transform.localRotation;
         rot = Quaternion.Lerp(rot, LightRotTarget, lerpAmount);
         worldLight.transform.localRotation = rot;
+
+        //Sky Transparency
+        if(SkyTransparencyController)
+        {
+            SkyTransparencyController.alpha = Mathf.Lerp(SkyTransparencyController.alpha, SkyTransparencyTarget, lerpAmount);
+        }
+
+        if(GroundBrightnessController)
+        {
+            GroundBrightnessController.darkness = Mathf.Lerp(GroundBrightnessController.darkness, GroundBrightnessTarget, lerpAmount);
+        }
     }
 
     public void Reset(float value = 0)
@@ -60,5 +81,21 @@ public class WorldController : MonoBehaviour
     public void SetLightRotNorm(float value)
     {
         LightRotTarget = Quaternion.Euler(Vector3.Lerp(LightRotMin, LightRotMax, value));
+    }
+
+    public void SetGroundBrightness(float value)
+    {
+        if(GroundBrightnessController)
+        {
+            GroundBrightnessTarget = MathUtils.Map(value, 0, 1, GroundBrightnessMin, GroundBrightnessMax);
+        }
+    }
+
+    public void SetVideoOpacity(float value)
+    {
+        if(SkyTransparencyController)
+        {
+            SkyTransparencyTarget = MathUtils.Map(value, 0, 1, SkyTransparencyMin, SkyTransparencyMax);
+        }
     }
 }
