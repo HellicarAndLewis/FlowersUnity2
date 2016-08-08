@@ -1,4 +1,4 @@
-﻿Shader "Unlit/UnlitTransparent" {
+﻿Shader "Unlit/AlphaFade" {
 
 	Properties
 	{
