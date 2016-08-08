@@ -15,6 +15,7 @@ public class WorldGuiController : MonoBehaviour
     
     public void Reset(float value = 0)
     {
+        // TODO store values and set them here
         worldCams.Reset(value);
         showControl.GetActiveWorld().Reset(value);
     }

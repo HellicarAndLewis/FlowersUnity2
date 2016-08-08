@@ -9150,8 +9150,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetDeformThresholdY
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnWorldSpeed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35133,8 +35133,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2095687542}
-        m_MethodName: OnWorldSpeed
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44703,7 +44703,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knob 1
+  m_Text: 'Ground Speed
 
 '
 --- !u!222 &1556448246
@@ -55162,7 +55162,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: World Speed
+  m_Text: 
 --- !u!222 &1925284343
 CanvasRenderer:
   m_ObjectHideFlags: 0
