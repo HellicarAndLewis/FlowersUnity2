@@ -2946,7 +2946,7 @@ MonoBehaviour:
   IntensityMax: 4
   LightRotMin: {x: -83, y: 110, z: 0}
   LightRotMax: {x: 0, y: 110, z: 0}
-  SkyTransparencyController: {fileID: 565269579}
+  SkyTransparencyController: {fileID: 611588949}
   SkyTransparencyMin: 0
   SkyTransparencyMax: 1
   GroundBrightnessController: {fileID: 768540255}
@@ -4591,10 +4591,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 98517865}
-  m_LocalRotation: {x: -0.067126475, y: -0, z: -0, w: 0.99774456}
-  m_LocalPosition: {x: 0, y: 36.92, z: -23.22}
+  m_LocalRotation: {x: -0.0016942557, y: -0, z: -0, w: 0.9999986}
+  m_LocalPosition: {x: 0, y: 38.8, z: -21.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -2.8930001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.192, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2095687540}
   m_RootOrder: 0
@@ -4759,8 +4759,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 400
-  field of view: 35
+  far clip plane: 1000
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -11935,7 +11935,6 @@ GameObject:
   - 4: {fileID: 294722063}
   - 33: {fileID: 294722067}
   - 23: {fileID: 294722066}
-  - 114: {fileID: 294722065}
   - 114: {fileID: 294722064}
   m_Layer: 0
   m_Name: RingFlat12
@@ -11973,18 +11972,6 @@ MonoBehaviour:
   _mesh: {fileID: 294722066}
   _media: {fileID: 1187552096}
   _defaultTexture: {fileID: 0}
---- !u!114 &294722065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 294722062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12430b8ac2c0fa14b9b9ee6d566b5370, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movTexture: {fileID: 15200000, guid: 80e9879e23d16154d87416b2981373e8, type: 3}
 --- !u!23 &294722066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61501,15 +61488,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012897518720, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 36.92
+      value: 38.8
       objectReference: {fileID: 0}
     - target: {fileID: 4000012897518720, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -23.22
+      value: -21.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012897518720, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.067126475
+      value: -0.0016942557
       objectReference: {fileID: 0}
     - target: {fileID: 4000012897518720, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
       propertyPath: m_LocalRotation.y
@@ -61521,7 +61508,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012897518720, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.99774456
+      value: 0.9999986
       objectReference: {fileID: 0}
     - target: {fileID: 4000012897518720, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
       propertyPath: m_RootOrder
@@ -61546,12 +61533,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012897518720, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -2.8930001
+      value: -0.192
       objectReference: {fileID: 0}
     - target: {fileID: 124000011674502954, guid: dc62cd541f346e24e8ba68a9333c7d71,
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012069387982, guid: dc62cd541f346e24e8ba68a9333c7d71,
+        type: 2}
+      propertyPath: field of view
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012069387982, guid: dc62cd541f346e24e8ba68a9333c7d71,
+        type: 2}
+      propertyPath: far clip plane
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc62cd541f346e24e8ba68a9333c7d71, type: 2}
@@ -67338,7 +67335,6 @@ GameObject:
   - 4: {fileID: 1565280242}
   - 33: {fileID: 1565280246}
   - 23: {fileID: 1565280245}
-  - 114: {fileID: 1565280244}
   - 114: {fileID: 1565280243}
   m_Layer: 0
   m_Name: RingFlat12
@@ -67376,18 +67372,6 @@ MonoBehaviour:
   _mesh: {fileID: 1565280245}
   _media: {fileID: 1187552096}
   _defaultTexture: {fileID: 0}
---- !u!114 &1565280244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1565280241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12430b8ac2c0fa14b9b9ee6d566b5370, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movTexture: {fileID: 15200000, guid: 80e9879e23d16154d87416b2981373e8, type: 3}
 --- !u!23 &1565280245
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -88408,11 +88392,11 @@ MonoBehaviour:
   primaryCam: {fileID: 98517876}
   secondaryCam: {fileID: 1425093062}
   bloom: {fileID: 98517869}
-  minHeight: 36
+  minHeight: 38.8
   maxHeight: 39
   targetHeight: 0
-  minRotation: -7.6
-  maxRotation: 0
+  minRotation: -0.192
+  maxRotation: -0.192
   targeRotation: {x: 0, y: 0, z: 0, w: 0}
   minBloom: 0
   maxBloom: 2.4
