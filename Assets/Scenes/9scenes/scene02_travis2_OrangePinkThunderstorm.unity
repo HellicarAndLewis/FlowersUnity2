@@ -4232,7 +4232,7 @@ GameObject:
   - 114: {fileID: 1607511801}
   - 114: {fileID: 1607511807}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: videoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4266,7 +4266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_VideoLocation: 2
-  m_VideoPath: SCENE02_thunderstorm.mp4
+  m_VideoPath: stormySkyLooped.mp4
   m_AutoOpen: 1
   m_AutoStart: 1
   m_Loop: 1
@@ -4388,7 +4388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
-  alpha: 0.302
+  alpha: 0.698
 --- !u!1 &1701469631
 GameObject:
   m_ObjectHideFlags: 0
