@@ -357,7 +357,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Roll Speed
+  m_Text: 'Bloom
 
 '
 --- !u!222 &3561609
@@ -3125,10 +3125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.32
+  threshold: 0.156
   intensity: 0
-  blurSize: 5.5
-  blurIterations: 1
+  blurSize: 1.78
+  blurIterations: 2
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
 --- !u!114 &98517870
@@ -3465,8 +3465,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3480,7 +3480,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 106746519}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -3678,7 +3678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knob 1
+  m_Text: 'Emissive
 
 '
 --- !u!222 &108542258
@@ -3823,18 +3823,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2095687542}
-        m_MethodName: OnWorldSpeed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+        m_MethodName: OnBloom
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6771,7 +6760,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 253435737}
   m_Layer: 0
-  m_Name: Col_1
+  m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7495,9 +7484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Distortion
-
-'
+  m_Text: Light Rotation
 --- !u!222 &261042878
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7644,7 +7631,7 @@ MonoBehaviour:
   lerpAmount: 0.1
   ground: {fileID: 28891975}
   GroundSpeedMin: 0
-  GroundSpeedMax: 0.03
+  GroundSpeedMax: 0.5
   worldLight: {fileID: 215122032}
   IntensityMin: 0.1
   IntensityMax: 4
@@ -7654,10 +7641,13 @@ MonoBehaviour:
   SkyTransparencyMin: 0
   SkyTransparencyMax: 1
   SkyTransparencyTarget: 0
-  GroundBrightnessController: {fileID: 969659671}
+  GroundBrightnessController: {fileID: 2028674933}
   GroundBrightnessMin: 0
   GroundBrightnessMax: 1
   GroundBrightnessTarget: 0
+  EmissiveMin: 0
+  EmissiveMax: 1
+  EmissiveTarget: 0
 --- !u!1 &284766900
 GameObject:
   m_ObjectHideFlags: 0
@@ -10839,7 +10829,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'RGBShift
+  m_Text: 'Ground
+
 
 '
 --- !u!222 &387847528
@@ -12891,9 +12882,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BWShift
-
-'
+  m_Text: Sky
 --- !u!222 &443106348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16598,8 +16587,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16756,8 +16745,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16771,7 +16760,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 569023078}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -20525,8 +20514,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -20540,7 +20529,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 726303123}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -21857,9 +21846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pixelation
-
-'
+  m_Text: Cam
 --- !u!222 &780506258
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22059,7 +22046,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 783403588}
   m_Layer: 0
-  m_Name: Col_2
+  m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23215,7 +23202,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Amount
+  m_Text: 'Ground Bright
 
 '
 --- !u!222 &832372186
@@ -24111,9 +24098,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Width
-
-'
+  m_Text: 
 --- !u!222 &862182283
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24856,8 +24841,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2092359203}
-        m_MethodName: OnIntensity
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25813,6 +25798,9 @@ MonoBehaviour:
   GroundBrightnessMin: 0
   GroundBrightnessMax: 1
   GroundBrightnessTarget: 0
+  EmissiveMin: 0
+  EmissiveMax: 0
+  EmissiveTarget: 0
 --- !u!1 &932416828
 GameObject:
   m_ObjectHideFlags: 0
@@ -26216,7 +26204,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Distortion 2
+  m_Text: 'Light Intensity
 
 '
 --- !u!222 &944942118
@@ -26819,6 +26807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   darkness: 0
+  emissive: {r: 0, g: 0, b: 0, a: 1}
+  emissiveBright: 0
   renderers: []
 --- !u!1 &972656719
 GameObject:
@@ -29472,8 +29462,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -29487,7 +29477,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 1090849638}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -29925,8 +29915,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -30391,6 +30381,41 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010029525602, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.63235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010029525602, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.72616625
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010029525602, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010029525602, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
+        type: 2}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010029525602, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
+        type: 2}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.21379304
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010029525602, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
+        type: 2}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010029525602, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
+        type: 2}
+      propertyPath: m_TargetGraphic
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6, type: 2}
@@ -33784,7 +33809,7 @@ GameObject:
   - 114: {fileID: 1230671348}
   - 114: {fileID: 1230671347}
   m_Layer: 0
-  m_Name: Knob 1
+  m_Name: Ground Bright
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33855,8 +33880,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2092359200}
-        m_MethodName: OnAmount
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnGroundDarkness
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33866,8 +33891,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1867930904}
-        m_MethodName: OnAmount
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35315,8 +35340,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetDeformThresholdY
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnWorldSpeed
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36698,8 +36723,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -36713,7 +36738,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 1334691140}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -38232,9 +38257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Stack 1
-
-'
+  m_Text: 
 --- !u!222 &1386390537
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38573,8 +38596,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -38588,7 +38611,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 1395395029}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -41107,8 +41130,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetDeformThresholdY
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnGroundEmissive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41210,7 +41233,7 @@ GameObject:
   - 114: {fileID: 1425485344}
   - 114: {fileID: 1425485343}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: Cam Height
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41742,8 +41765,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -44219,9 +44242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Scan Lines
-
-'
+  m_Text: 
 --- !u!222 &1534927401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44792,7 +44813,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1553941877}
   m_Layer: 0
-  m_Name: Col_3
+  m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45488,7 +45509,7 @@ GameObject:
   - 114: {fileID: 1587802004}
   - 114: {fileID: 1587802003}
   m_Layer: 0
-  m_Name: Knob 3
+  m_Name: Light Intensity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46162,7 +46183,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1612162951}
   m_Layer: 0
-  m_Name: RGBShift
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46561,9 +46582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Noise
-
-'
+  m_Text: 
 --- !u!222 &1633242871
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48212,8 +48231,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2092359199}
-        m_MethodName: OnWidth
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48223,8 +48242,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1867930905}
-        m_MethodName: OnWidth
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -50760,8 +50779,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -50775,7 +50794,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 1783458565}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -54241,9 +54260,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Height
-
-'
+  m_Text: 
 --- !u!222 &1888243994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54523,7 +54540,7 @@ GameObject:
   - 114: {fileID: 1894656527}
   - 114: {fileID: 1894656526}
   m_Layer: 0
-  m_Name: Knob 2
+  m_Name: Light Rot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55373,9 +55390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knob 1
-
-'
+  m_Text: World Speed
 --- !u!222 &1925284343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55801,8 +55816,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2092359199}
-        m_MethodName: OnHeight
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55812,8 +55827,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1867930905}
-        m_MethodName: OnHeight
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -56517,12 +56532,6 @@ Transform:
   - {fileID: 2131232430}
   m_Father: {fileID: 1991693163}
   m_RootOrder: 6
---- !u!114 &1966999077 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011327662578, guid: cbc9e92fa9e25c5499ac53c05a3cc3a6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1115924709}
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1967970295
 GameObject:
   m_ObjectHideFlags: 0
@@ -57101,7 +57110,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985559850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b40a0e49362b35a47896e08d36e71018, type: 3}
   m_Name: 
@@ -57785,7 +57794,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knob 1
+  m_Text: 'Cam Height
 
 '
 --- !u!222 &2014705674
@@ -58215,6 +58224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   darkness: 0
+  emissive: {r: 1, g: 0.32941177, b: 0.12941177, a: 1}
+  emissiveBright: 0
   renderers: []
 --- !u!1 &2030231235
 GameObject:
@@ -58860,8 +58871,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -58875,7 +58886,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 2054768455}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -59181,8 +59192,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -59196,7 +59207,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 2057895624}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -59848,9 +59859,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Camera
-
-'
+  m_Text: 
 --- !u!222 &2068691689
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59987,8 +59996,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.63235295, g: 0.72616625, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.21379304, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -60002,7 +60011,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966999077}
+  m_TargetGraphic: {fileID: 2074110643}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -60812,12 +60821,16 @@ MonoBehaviour:
   lerpAmount: 0.1
   primaryCam: {fileID: 98517876}
   secondaryCam: {fileID: 1425093062}
+  bloom: {fileID: 98517869}
   minHeight: 36
   maxHeight: 39
   targetHeight: 0
   minRotation: -7.6
   maxRotation: 0
   targeRotation: {x: 0, y: 0, z: 0, w: 0}
+  minBloom: 0
+  maxBloom: 2.4
+  targetBloom: 0
 --- !u!1 &2097969862
 GameObject:
   m_ObjectHideFlags: 0
