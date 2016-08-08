@@ -70,6 +70,7 @@ public class WorldController : MonoBehaviour
 
     public void Reset(float value = 0)
     {
+        GetComponent<SkyboxController>().UpdateMaterial();
         SetGroundSpeedNorm(value);
         SetLightIntenseNorm(value);
         SetLightRotNorm(value);
