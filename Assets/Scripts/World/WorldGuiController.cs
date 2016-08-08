@@ -25,6 +25,12 @@ public class WorldGuiController : MonoBehaviour
         worldCams.SetNormHeight(value);
     }
 
+    public void OnReverseWorldSpeed(bool value)
+    {
+        var world = showControl.GetActiveWorld();
+        world.SetWorldDirection(value);
+    }
+
     public void OnWorldSpeed(float value)
     {
         var world = showControl.GetActiveWorld();

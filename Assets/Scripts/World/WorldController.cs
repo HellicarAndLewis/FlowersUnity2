@@ -9,6 +9,7 @@ public class WorldController : MonoBehaviour
     public float GroundSpeedMin = 0;
     public float GroundSpeedMax = 1;
     private float GroundSpeedTarget = 1;
+    public int GroundSpeedDirection = 1;
 
     public Light worldLight;
     public float IntensityMin = 0;
@@ -53,10 +54,10 @@ public class WorldController : MonoBehaviour
     void Update()
     {
         // ground speed
-        if (ground) ground.speedX = Mathf.Lerp(ground.speedX, MathUtils.Map(GroundSpeedTarget, 0, 1, GroundSpeedMin, GroundSpeedMax, true), lerpAmount);
+        if (ground) ground.speedX = Mathf.Lerp(ground.speedX, GroundSpeedTarget * GroundSpeedDirection, lerpAmount) ;
 
         // light intensity
-        worldLight.intensity = Mathf.Lerp(worldLight.intensity, MathUtils.Map(IntensityTarget, 0, 1, IntensityMin, IntensityMax, true), lerpAmount);
+        worldLight.intensity = Mathf.Lerp(worldLight.intensity, IntensityTarget, lerpAmount);
 
         // light rotation
         var rot = worldLight.transform.localRotation;
@@ -89,6 +90,11 @@ public class WorldController : MonoBehaviour
     public void SetGroundSpeedNorm(float value)
     {
         GroundSpeedTarget = MathUtils.Map(value, 0, 1, GroundSpeedMin, GroundSpeedMax, true);
+    }
+
+    public void SetWorldDirection(bool value)
+    {
+        GroundSpeedDirection *= (value) ? 1 : -1;
     }
 
     public void SetLightIntenseNorm(float value)
