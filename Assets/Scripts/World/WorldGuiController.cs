@@ -65,4 +65,16 @@ public class WorldGuiController : MonoBehaviour
         var world = showControl.GetActiveWorld();
         world.SetGroundEmissive(value);
     }
+
+    public void OnSkyHue(float value)
+    {
+        var world = showControl.GetActiveWorld();
+        world.SetVideoHue(value);
+    }
+
+    public void OnSkySaturaton(float value)
+    {
+        var world = showControl.GetActiveWorld();
+        world.SetVideoSaturation(value);
+    }
 }
