@@ -56,6 +56,7 @@ public class ShowController : MonoBehaviour
             if (Input.GetKeyDown("w")) GoToMode(ShowMode.Blank);
             if (Input.GetKeyDown("e")) GoToMode(ShowMode.Rock);
             if (Input.GetKeyDown("r")) GoToMode(ShowMode.Logo);
+            if (Input.GetKeyDown("t")) ToggleMidiControl();
             if (Input.GetKeyDown("a")) GoToMode(ShowMode.World_1);
             if (Input.GetKeyDown("s")) GoToMode(ShowMode.World_2);
             if (Input.GetKeyDown("d")) GoToMode(ShowMode.World_3);

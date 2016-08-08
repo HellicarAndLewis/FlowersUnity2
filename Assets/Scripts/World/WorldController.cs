@@ -64,6 +64,7 @@ public class WorldController : MonoBehaviour
 
     public void Reset(float value = 0)
     {
+        SetGroundSpeedNorm(value);
         SetLightIntenseNorm(value);
         SetLightRotNorm(value);
     }
