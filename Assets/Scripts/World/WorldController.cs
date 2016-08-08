@@ -27,6 +27,11 @@ public class WorldController : MonoBehaviour
     public float GroundBrightnessMin;
     public float GroundBrightnessMax;
     public float GroundBrightnessTarget;
+    // Ground Emissive
+    public float EmissiveMin;
+    public float EmissiveMax;
+    public float EmissiveTarget;
+
 
     // Use this for initialization
     void Start()
@@ -59,11 +64,13 @@ public class WorldController : MonoBehaviour
         if(GroundBrightnessController)
         {
             GroundBrightnessController.darkness = Mathf.Lerp(GroundBrightnessController.darkness, GroundBrightnessTarget, lerpAmount);
+            GroundBrightnessController.emissiveBright = Mathf.Lerp(GroundBrightnessController.emissiveBright, EmissiveTarget, lerpAmount);
         }
     }
 
     public void Reset(float value = 0)
     {
+        SetGroundSpeedNorm(value);
         SetLightIntenseNorm(value);
         SetLightRotNorm(value);
     }
@@ -98,4 +105,14 @@ public class WorldController : MonoBehaviour
             SkyTransparencyTarget = MathUtils.Map(value, 0, 1, SkyTransparencyMin, SkyTransparencyMax);
         }
     }
+
+    
+    public void SetGroundEmissive(float value)
+    {
+        if (GroundBrightnessController)
+        {
+            EmissiveTarget = MathUtils.Map(value, 0, 1, EmissiveMin, EmissiveMax);
+        }
+    }
+
 }
