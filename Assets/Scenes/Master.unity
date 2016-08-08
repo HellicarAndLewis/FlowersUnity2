@@ -24268,7 +24268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &557492349
 Transform:
   m_ObjectHideFlags: 0
@@ -31130,7 +31130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_VideoLocation: 2
-  m_VideoPath: fire_loop.mp4
+  m_VideoPath: fireLoopSmall_featheredEdge.mp4
   m_AutoOpen: 1
   m_AutoStart: 1
   m_Loop: 1
@@ -88859,7 +88859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   darkness: 0
-  emissive: {r: 1, g: 0.32941177, b: 0.12941177, a: 1}
+  emissive: {r: 0.5803922, g: 0.3882353, b: 0.19215687, a: 1}
   emissiveBright: 0
   renderers: []
 --- !u!1 &2029288682
