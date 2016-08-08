@@ -2159,14 +2159,16 @@ MonoBehaviour:
   SkyTransparencyController: {fileID: 565269579}
   SkyTransparencyMin: 0
   SkyTransparencyMax: 1
-  SkyTransparencyTarget: 0
   GroundBrightnessController: {fileID: 768540255}
   GroundBrightnessMin: 0
   GroundBrightnessMax: 1
-  GroundBrightnessTarget: 0
   EmissiveMin: 0
   EmissiveMax: 1
   EmissiveTarget: 0
+  SkyHueMin: 0
+  SkyHueMax: 1
+  SkySatMin: 0
+  SkySatMax: 1
 --- !u!114 &61066916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8762,14 +8764,16 @@ MonoBehaviour:
   SkyTransparencyController: {fileID: 686130519}
   SkyTransparencyMin: 0
   SkyTransparencyMax: 1
-  SkyTransparencyTarget: 0
   GroundBrightnessController: {fileID: 2028674933}
   GroundBrightnessMin: 0
   GroundBrightnessMax: 1
-  GroundBrightnessTarget: 0
   EmissiveMin: 0
   EmissiveMax: 1
   EmissiveTarget: 0
+  SkyHueMin: 0
+  SkyHueMax: 1
+  SkySatMin: 0
+  SkySatMax: 1
 --- !u!114 &279058602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18540,6 +18544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 565269582}
+  saturation: 0
+  hue: 0
   alpha: 1
   blocking: 0
 --- !u!114 &565269580
@@ -20206,6 +20212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 611588952}
+  saturation: 0
+  hue: 0
   alpha: 0
   blocking: 1
 --- !u!114 &611588950
@@ -21106,6 +21114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
+  saturation: 0.48
+  hue: 0.52
   alpha: 1
   blocking: 0
 --- !u!114 &629126351
@@ -22683,6 +22693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 686130522}
+  saturation: 0
+  hue: 0
   alpha: 0.207
   blocking: 0
 --- !u!114 &686130520
@@ -25687,14 +25699,16 @@ MonoBehaviour:
   SkyTransparencyController: {fileID: 629126350}
   SkyTransparencyMin: 0
   SkyTransparencyMax: 1
-  SkyTransparencyTarget: 0
   GroundBrightnessController: {fileID: 1922407284}
   GroundBrightnessMin: 0
   GroundBrightnessMax: 1
-  GroundBrightnessTarget: 0
   EmissiveMin: 0
   EmissiveMax: 1
   EmissiveTarget: 0
+  SkyHueMin: 0
+  SkyHueMax: 1
+  SkySatMin: 0
+  SkySatMax: 1
 --- !u!114 &801033900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28255,7 +28269,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 265880445}
   m_FillRect: {fileID: 631758115}
   m_HandleRect: {fileID: 265880443}
@@ -28267,19 +28281,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1867930903}
-        m_MethodName: OnIntensity
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnSkyHue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29423,7 +29426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Intensity
+  m_Text: 'Sky Hue
 
 '
 --- !u!222 &938308357
@@ -51869,7 +51872,7 @@ GameObject:
   - 222: {fileID: 1651552020}
   - 114: {fileID: 1651552019}
   m_Layer: 0
-  m_Name: Text (7)
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51927,7 +51930,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knob 1
+  m_Text: 'Sky Sat
 
 '
 --- !u!222 &1651552020
@@ -56985,7 +56988,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 290321710}
   m_FillRect: {fileID: 1506846877}
   m_HandleRect: {fileID: 290321709}
@@ -56997,8 +57000,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetDeformThresholdY
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnSkySaturaton
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
