@@ -26,7 +26,8 @@ public class SliderController : MonoBehaviour {
         {
             slider.value = fft.spectrumBinned[Mathf.Min(bin, fft.bins-1)];
         }
-        else if(!slider.interactable)
+        //else if(!slider.interactable)
+        else
         {
             float test = MidiJack.MidiMaster.GetKnob(cc, 0);
             slider.value = test;
