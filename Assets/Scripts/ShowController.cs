@@ -16,6 +16,7 @@ public class ShowController : MonoBehaviour
     public SceneFadeInOut[] scenes;
     public GameObject commonWorld;
     public WorldGuiController worldGui;
+    public bool midiControlled = false;
 
     public ShowMode showMode = ShowMode.World_1;
     private ShowMode queuedShowMode = ShowMode.World_1;
@@ -80,6 +81,17 @@ public class ShowController : MonoBehaviour
         }
         
     }
+
+    public void ToggleMidiControl()
+    {
+        midiControlled = !midiControlled;
+        var controls = FindObjectsOfType<SliderController>();
+        foreach (var control in controls)
+        {
+            control.midiControlled = midiControlled;
+        }
+    }
+
     // --------------------------------------------------------------------------------------------------------
     //
     private void OnSceneFadeOut()
