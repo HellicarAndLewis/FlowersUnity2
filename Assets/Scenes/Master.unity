@@ -760,6 +760,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 28891974}
   - 114: {fileID: 28891975}
+  - 114: {fileID: 28891976}
   m_Layer: 0
   m_Name: worldSpinner
   m_TagString: Untagged
@@ -799,6 +800,19 @@ MonoBehaviour:
   speedY: 0
   speedZ: 0
   vec: {x: 0, y: 0, z: 0}
+--- !u!114 &28891976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28891973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32079fb197744484f8a847776bf538c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkness: 0
+  renderers: []
 --- !u!4 &36478368 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 678f0e1e528c90c4ea831ec6787362c2, type: 3}
@@ -7320,6 +7334,10 @@ MonoBehaviour:
   SkyTransparencyMin: 0
   SkyTransparencyMax: 1
   SkyTransparencyTarget: 0
+  GroundBrightnessController: {fileID: 28891976}
+  GroundBrightnessMin: 0
+  GroundBrightnessMax: 1
+  GroundBrightnessTarget: 0
 --- !u!1 &284766900
 GameObject:
   m_ObjectHideFlags: 0
@@ -10769,6 +10787,178 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &397152455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 397152456}
+  - 33: {fileID: 397152462}
+  - 64: {fileID: 397152461}
+  - 23: {fileID: 397152460}
+  - 114: {fileID: 397152459}
+  - 114: {fileID: 397152458}
+  - 114: {fileID: 397152457}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397152456
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_LocalRotation: {x: 0.0045857667, y: 0.6542341, z: -0.75626785, w: -0.003967069}
+  m_LocalPosition: {x: 0, y: 63.2, z: 46}
+  m_LocalScale: {x: 8.777973, y: 0, z: 4.937605}
+  m_LocalEulerAnglesHint: {x: -278.327, y: -4.6790004, z: 175.37001}
+  m_Children: []
+  m_Father: {fileID: 928831791}
+  m_RootOrder: 4
+--- !u!114 &397152457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
+  alpha: 0.302
+--- !u!114 &397152458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 397152460}
+  _media: {fileID: 397152459}
+  _defaultTexture: {fileID: 0}
+--- !u!114 &397152459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638c870cac4da414fba921606d504407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_VideoLocation: 2
+  m_VideoPath: SCENE02_thunderstorm.mp4
+  m_AutoOpen: 1
+  m_AutoStart: 1
+  m_Loop: 1
+  m_Volume: 1
+  m_Muted: 1
+  m_PlaybackRate: 1
+  m_DebugGui: 0
+  m_Persistent: 0
+  m_StereoPacking: 0
+  m_DisplayDebugStereoColorTint: 0
+  m_FilterMode: 1
+  m_WrapMode: 1
+  m_AnisoLevel: 0
+  m_events:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: RenderHeads.Media.AVProVideo.MediaPlayerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _optionsWindows:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+    forceDirectShowApi: 0
+    forceAudioOutputDeviceName: 
+  _optionsMacOSX:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsIOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsTVOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsAndroid:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsPhone:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsUWP:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+--- !u!23 &397152460
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b63de6107a525d84692a7705113bacf5, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &397152461
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &397152462
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &398889414
 GameObject:
   m_ObjectHideFlags: 0
@@ -24777,6 +24967,7 @@ Transform:
   - {fileID: 1181550046}
   - {fileID: 560091472}
   - {fileID: 2137117755}
+  - {fileID: 397152456}
   m_Father: {fileID: 1536967062}
   m_RootOrder: 1
 --- !u!114 &928831792
@@ -24806,16 +24997,20 @@ MonoBehaviour:
   lerpAmount: 0.1
   ground: {fileID: 1307940228}
   GroundSpeedMin: 0
-  GroundSpeedMax: 0.3
+  GroundSpeedMax: 0.1
   worldLight: {fileID: 560091473}
   IntensityMin: 0
   IntensityMax: 4
   LightRotMin: {x: -10, y: 30, z: 0}
   LightRotMax: {x: 120, y: 30, z: 0}
-  SkyTransparencyController: {fileID: 0}
+  SkyTransparencyController: {fileID: 397152457}
   SkyTransparencyMin: 0
-  SkyTransparencyMax: 0
+  SkyTransparencyMax: 1
   SkyTransparencyTarget: 0
+  GroundBrightnessController: {fileID: 1307940229}
+  GroundBrightnessMin: 0
+  GroundBrightnessMax: 1
+  GroundBrightnessTarget: 0
 --- !u!1 &932416828
 GameObject:
   m_ObjectHideFlags: 0
@@ -34870,6 +35065,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1307940227}
   - 114: {fileID: 1307940228}
+  - 114: {fileID: 1307940229}
   m_Layer: 0
   m_Name: worldSpinner
   m_TagString: Untagged
@@ -34909,6 +35105,19 @@ MonoBehaviour:
   speedY: 0
   speedZ: 0
   vec: {x: 0, y: 0, z: 0}
+--- !u!114 &1307940229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1307940226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32079fb197744484f8a847776bf538c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkness: 0
+  renderers: []
 --- !u!1 &1312955563
 GameObject:
   m_ObjectHideFlags: 0
