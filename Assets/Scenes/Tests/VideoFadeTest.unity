@@ -253,6 +253,7 @@ GameObject:
   - 23: {fileID: 1725759066}
   - 114: {fileID: 1725759071}
   - 114: {fileID: 1725759070}
+  - 114: {fileID: 1725759072}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -349,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_VideoLocation: 2
-  m_VideoPath: Floral.mp4
+  m_VideoPath: 032687439-fire-explosion_H264_420.mov
   m_AutoOpen: 1
   m_AutoStart: 1
   m_Loop: 1
@@ -398,3 +399,16 @@ MonoBehaviour:
     overridePath: 0
     pathLocation: 2
     path: 
+--- !u!114 &1725759072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725759065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
+  alpha: 0.542

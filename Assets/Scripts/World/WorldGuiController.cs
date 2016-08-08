@@ -42,4 +42,10 @@ public class WorldGuiController : MonoBehaviour
         world.SetLightRotNorm(value);
     }
 
+    public void OnVideoOpacity(float value)
+    {
+        var world = showControl.GetActiveWorld();
+        world.SetVideoOpacity(value);
+    }
+
 }

@@ -3174,7 +3174,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 98517865}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd70d448b18cfbc46af26466f752332c, type: 3}
   m_Name: 
@@ -3235,7 +3235,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 40
+  far clip plane: 400
   field of view: 35
   orthographic: 0
   orthographic size: 5
@@ -7280,6 +7280,7 @@ Transform:
   - {fileID: 1294507944}
   - {fileID: 1985559851}
   - {fileID: 692587918}
+  - {fileID: 686130518}
   m_Father: {fileID: 1536967062}
   m_RootOrder: 0
 --- !u!114 &279058600
@@ -7309,12 +7310,16 @@ MonoBehaviour:
   lerpAmount: 0.1
   ground: {fileID: 28891975}
   GroundSpeedMin: 0
-  GroundSpeedMax: 1
+  GroundSpeedMax: 0.03
   worldLight: {fileID: 215122032}
   IntensityMin: 0.1
   IntensityMax: 4
   LightRotMin: {x: -83, y: 110, z: 0}
   LightRotMax: {x: 0, y: 110, z: 0}
+  SkyTransparencyController: {fileID: 686130519}
+  SkyTransparencyMin: 0
+  SkyTransparencyMax: 1
+  SkyTransparencyTarget: 0
 --- !u!1 &284766900
 GameObject:
   m_ObjectHideFlags: 0
@@ -8284,7 +8289,7 @@ GameObject:
   - 222: {fileID: 311677786}
   - 114: {fileID: 311677785}
   m_Layer: 0
-  m_Name: Text (7)
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8342,7 +8347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knob 1
+  m_Text: 'Sky Opacity
 
 '
 --- !u!222 &311677786
@@ -18769,6 +18774,178 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 678f0e1e528c90c4ea831ec6787362c2, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &686130517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 686130518}
+  - 33: {fileID: 686130524}
+  - 64: {fileID: 686130523}
+  - 23: {fileID: 686130522}
+  - 114: {fileID: 686130521}
+  - 114: {fileID: 686130520}
+  - 114: {fileID: 686130519}
+  m_Layer: 0
+  m_Name: videoPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686130518
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686130517}
+  m_LocalRotation: {x: -0.03822512, y: 0.6226023, z: -0.7810101, w: -0.030472139}
+  m_LocalPosition: {x: 0.1, y: 68, z: 54.7}
+  m_LocalScale: {x: 9.998259, y: 6.2489166, z: 5.6240234}
+  m_LocalEulerAnglesHint: {x: -257.122, y: -174.396, z: 0}
+  m_Children: []
+  m_Father: {fileID: 279058599}
+  m_RootOrder: 5
+--- !u!114 &686130519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686130517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 686130522}
+  alpha: 0.207
+--- !u!114 &686130520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686130517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 686130522}
+  _media: {fileID: 686130521}
+  _defaultTexture: {fileID: 0}
+--- !u!114 &686130521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686130517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638c870cac4da414fba921606d504407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_VideoLocation: 2
+  m_VideoPath: SCENE01_lightClouds.mp4
+  m_AutoOpen: 1
+  m_AutoStart: 1
+  m_Loop: 1
+  m_Volume: 1
+  m_Muted: 1
+  m_PlaybackRate: 1
+  m_DebugGui: 0
+  m_Persistent: 0
+  m_StereoPacking: 0
+  m_DisplayDebugStereoColorTint: 0
+  m_FilterMode: 1
+  m_WrapMode: 1
+  m_AnisoLevel: 0
+  m_events:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: RenderHeads.Media.AVProVideo.MediaPlayerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _optionsWindows:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+    forceDirectShowApi: 0
+    forceAudioOutputDeviceName: 
+  _optionsMacOSX:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsIOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsTVOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsAndroid:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsPhone:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsUWP:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+--- !u!23 &686130522
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686130517}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b63de6107a525d84692a7705113bacf5, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &686130523
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686130517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &686130524
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686130517}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &687919287
 GameObject:
   m_ObjectHideFlags: 0
@@ -24629,12 +24806,16 @@ MonoBehaviour:
   lerpAmount: 0.1
   ground: {fileID: 1307940228}
   GroundSpeedMin: 0
-  GroundSpeedMax: 1
+  GroundSpeedMax: 0.3
   worldLight: {fileID: 560091473}
   IntensityMin: 0
   IntensityMax: 4
   LightRotMin: {x: -10, y: 30, z: 0}
   LightRotMax: {x: 120, y: 30, z: 0}
+  SkyTransparencyController: {fileID: 0}
+  SkyTransparencyMin: 0
+  SkyTransparencyMax: 0
+  SkyTransparencyTarget: 0
 --- !u!1 &932416828
 GameObject:
   m_ObjectHideFlags: 0
@@ -43040,7 +43221,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1553941877}
   m_Layer: 0
-  m_Name: BWShift
+  m_Name: Col_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45275,7 +45456,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 604597711}
   m_FillRect: {fileID: 514671983}
   m_HandleRect: {fileID: 604597710}
@@ -45287,8 +45468,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetDeformThresholdY
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnVideoOpacity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
