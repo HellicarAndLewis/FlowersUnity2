@@ -48,4 +48,10 @@ public class WorldGuiController : MonoBehaviour
         world.SetVideoOpacity(value);
     }
 
+    public void OnGroundDarkness(float value)
+    {
+        var world = showControl.GetActiveWorld();
+        world.SetGroundBrightness(value);
+    }
+
 }

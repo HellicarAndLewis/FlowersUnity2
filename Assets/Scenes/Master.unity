@@ -147,6 +147,7 @@ MonoBehaviour:
   cc: 59
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2292620
 MonoBehaviour:
@@ -760,6 +761,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 28891974}
   - 114: {fileID: 28891975}
+  - 114: {fileID: 28891976}
   m_Layer: 0
   m_Name: worldSpinner
   m_TagString: Untagged
@@ -799,6 +801,19 @@ MonoBehaviour:
   speedY: 0
   speedZ: 0
   vec: {x: 0, y: 0, z: 0}
+--- !u!114 &28891976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28891973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32079fb197744484f8a847776bf538c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkness: 0
+  renderers: []
 --- !u!4 &36478368 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 678f0e1e528c90c4ea831ec6787362c2, type: 3}
@@ -1001,6 +1016,7 @@ MonoBehaviour:
   cc: 61
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &40698293
 MonoBehaviour:
@@ -1037,7 +1053,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 59859160}
   m_FillRect: {fileID: 454057844}
   m_HandleRect: {fileID: 59859159}
@@ -1946,6 +1962,7 @@ MonoBehaviour:
   cc: 17
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &63523490
 MonoBehaviour:
@@ -1982,7 +1999,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1842397347}
   m_FillRect: {fileID: 290800627}
   m_HandleRect: {fileID: 1842397345}
@@ -3772,6 +3789,7 @@ MonoBehaviour:
   cc: 23
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &112234639
 MonoBehaviour:
@@ -5043,6 +5061,7 @@ MonoBehaviour:
   cc: 18
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &193775772
 MonoBehaviour:
@@ -5079,7 +5098,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 317659731}
   m_FillRect: {fileID: 1864761076}
   m_HandleRect: {fileID: 317659730}
@@ -5161,6 +5180,7 @@ MonoBehaviour:
   cc: 57
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &202090188
 MonoBehaviour:
@@ -5197,7 +5217,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 626488176}
   m_FillRect: {fileID: 1931716227}
   m_HandleRect: {fileID: 626488175}
@@ -6333,6 +6353,7 @@ MonoBehaviour:
   cc: 19
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &250105927
 MonoBehaviour:
@@ -6369,7 +6390,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1305365695}
   m_FillRect: {fileID: 499144023}
   m_HandleRect: {fileID: 1305365694}
@@ -6488,6 +6509,7 @@ MonoBehaviour:
   cc: 26
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &251226965
 MonoBehaviour:
@@ -7442,6 +7464,10 @@ MonoBehaviour:
   SkyTransparencyMin: 0
   SkyTransparencyMax: 1
   SkyTransparencyTarget: 0
+  GroundBrightnessController: {fileID: 28891976}
+  GroundBrightnessMin: 0
+  GroundBrightnessMax: 1
+  GroundBrightnessTarget: 0
 --- !u!1 &284766900
 GameObject:
   m_ObjectHideFlags: 0
@@ -7867,6 +7893,7 @@ MonoBehaviour:
   cc: 53
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &293422678
 MonoBehaviour:
@@ -8063,6 +8090,7 @@ MonoBehaviour:
   cc: 48
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &298326657
 MonoBehaviour:
@@ -9100,6 +9128,7 @@ MonoBehaviour:
   cc: 30
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &341849089
 MonoBehaviour:
@@ -10965,6 +10994,178 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &397152455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 397152456}
+  - 33: {fileID: 397152462}
+  - 64: {fileID: 397152461}
+  - 23: {fileID: 397152460}
+  - 114: {fileID: 397152459}
+  - 114: {fileID: 397152458}
+  - 114: {fileID: 397152457}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397152456
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_LocalRotation: {x: 0.0045857667, y: 0.6542341, z: -0.75626785, w: -0.003967069}
+  m_LocalPosition: {x: 0, y: 63.2, z: 46}
+  m_LocalScale: {x: 8.777973, y: 0, z: 4.937605}
+  m_LocalEulerAnglesHint: {x: -278.327, y: -4.6790004, z: 175.37001}
+  m_Children: []
+  m_Father: {fileID: 928831791}
+  m_RootOrder: 4
+--- !u!114 &397152457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
+  alpha: 0.302
+--- !u!114 &397152458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 397152460}
+  _media: {fileID: 397152459}
+  _defaultTexture: {fileID: 0}
+--- !u!114 &397152459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638c870cac4da414fba921606d504407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_VideoLocation: 2
+  m_VideoPath: SCENE02_thunderstorm.mp4
+  m_AutoOpen: 1
+  m_AutoStart: 1
+  m_Loop: 1
+  m_Volume: 1
+  m_Muted: 1
+  m_PlaybackRate: 1
+  m_DebugGui: 0
+  m_Persistent: 0
+  m_StereoPacking: 0
+  m_DisplayDebugStereoColorTint: 0
+  m_FilterMode: 1
+  m_WrapMode: 1
+  m_AnisoLevel: 0
+  m_events:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: RenderHeads.Media.AVProVideo.MediaPlayerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _optionsWindows:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+    forceDirectShowApi: 0
+    forceAudioOutputDeviceName: 
+  _optionsMacOSX:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsIOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsTVOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsAndroid:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsPhone:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsUWP:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+--- !u!23 &397152460
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b63de6107a525d84692a7705113bacf5, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &397152461
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &397152462
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397152455}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &398889414
 GameObject:
   m_ObjectHideFlags: 0
@@ -12056,6 +12257,7 @@ MonoBehaviour:
   cc: 57
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &428301304
 MonoBehaviour:
@@ -13548,6 +13750,7 @@ MonoBehaviour:
   cc: 30
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &473645275
 MonoBehaviour:
@@ -13584,7 +13787,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1156301370}
   m_FillRect: {fileID: 434911579}
   m_HandleRect: {fileID: 1156301369}
@@ -13795,6 +13998,7 @@ MonoBehaviour:
   cc: 29
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &478994336
 MonoBehaviour:
@@ -14567,6 +14771,7 @@ MonoBehaviour:
   cc: 23
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &503444574
 MonoBehaviour:
@@ -14603,7 +14808,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 56829011}
   m_FillRect: {fileID: 1229302281}
   m_HandleRect: {fileID: 56829010}
@@ -17641,6 +17846,7 @@ MonoBehaviour:
   cc: 27
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &616880378
 MonoBehaviour:
@@ -17677,7 +17883,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1783118335}
   m_FillRect: {fileID: 1170443538}
   m_HandleRect: {fileID: 1783118334}
@@ -19840,6 +20046,7 @@ MonoBehaviour:
   cc: 20
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &712754165
 MonoBehaviour:
@@ -19876,7 +20083,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2101055072}
   m_FillRect: {fileID: 1020617563}
   m_HandleRect: {fileID: 2101055070}
@@ -20248,6 +20455,7 @@ MonoBehaviour:
   cc: 49
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &734504883
 MonoBehaviour:
@@ -20284,7 +20492,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 952146642}
   m_FillRect: {fileID: 1931515620}
   m_HandleRect: {fileID: 952146641}
@@ -20952,6 +21160,7 @@ MonoBehaviour:
   cc: 28
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &772278110
 MonoBehaviour:
@@ -20988,7 +21197,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 352964902}
   m_FillRect: {fileID: 1844166755}
   m_HandleRect: {fileID: 352964900}
@@ -21140,7 +21349,7 @@ MonoBehaviour:
   particleComputeShader: {fileID: 7200000, guid: bf2d8244da10a1847824204e8c7d381d,
     type: 3}
   numParticles: 128
-  bounds: {x: 50, y: 100, z: 20}
+  bounds: {x: 50, y: 100, z: 100}
   speed: {x: 0, y: -0.01, z: 0}
   flowerNoisePositionScale: 0
   flowerNoisePositionMult: 0
@@ -21155,10 +21364,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 774925326}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 188190707}
   m_RootOrder: 2
@@ -23955,6 +24164,7 @@ MonoBehaviour:
   cc: 22
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &864289711
 MonoBehaviour:
@@ -23991,7 +24201,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 284962084}
   m_FillRect: {fileID: 1941208201}
   m_HandleRect: {fileID: 284962083}
@@ -24298,6 +24508,7 @@ MonoBehaviour:
   cc: 47
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &884323445
 MonoBehaviour:
@@ -24334,7 +24545,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 513650191}
   m_FillRect: {fileID: 1546626097}
   m_HandleRect: {fileID: 513650190}
@@ -24404,6 +24615,7 @@ MonoBehaviour:
   cc: 24
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &885363819
 MonoBehaviour:
@@ -25365,6 +25577,7 @@ Transform:
   - {fileID: 1181550046}
   - {fileID: 560091472}
   - {fileID: 2137117755}
+  - {fileID: 397152456}
   m_Father: {fileID: 1536967062}
   m_RootOrder: 1
 --- !u!114 &928831792
@@ -25394,16 +25607,20 @@ MonoBehaviour:
   lerpAmount: 0.1
   ground: {fileID: 1307940228}
   GroundSpeedMin: 0
-  GroundSpeedMax: 0.3
+  GroundSpeedMax: 0.1
   worldLight: {fileID: 560091473}
   IntensityMin: 0
   IntensityMax: 4
   LightRotMin: {x: -10, y: 30, z: 0}
   LightRotMax: {x: 120, y: 30, z: 0}
-  SkyTransparencyController: {fileID: 0}
+  SkyTransparencyController: {fileID: 397152457}
   SkyTransparencyMin: 0
-  SkyTransparencyMax: 0
+  SkyTransparencyMax: 1
   SkyTransparencyTarget: 0
+  GroundBrightnessController: {fileID: 1307940229}
+  GroundBrightnessMin: 0
+  GroundBrightnessMax: 1
+  GroundBrightnessTarget: 0
 --- !u!1 &932416828
 GameObject:
   m_ObjectHideFlags: 0
@@ -27776,6 +27993,7 @@ MonoBehaviour:
   cc: 47
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1049770702
 MonoBehaviour:
@@ -28551,6 +28769,7 @@ MonoBehaviour:
   cc: 60
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1070276214
 MonoBehaviour:
@@ -28587,7 +28806,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1704914159}
   m_FillRect: {fileID: 2013473549}
   m_HandleRect: {fileID: 1704914158}
@@ -28810,6 +29029,7 @@ MonoBehaviour:
   cc: 51
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1077237120
 MonoBehaviour:
@@ -28846,7 +29066,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 782977776}
   m_FillRect: {fileID: 1323282402}
   m_HandleRect: {fileID: 782977775}
@@ -28854,7 +29074,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -30274,6 +30494,7 @@ MonoBehaviour:
   cc: 55
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1126023502
 MonoBehaviour:
@@ -30310,7 +30531,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2092407384}
   m_FillRect: {fileID: 2079756082}
   m_HandleRect: {fileID: 2092407383}
@@ -30369,6 +30590,7 @@ MonoBehaviour:
   cc: 16
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1128733712
 MonoBehaviour:
@@ -30405,7 +30627,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 794118847}
   m_FillRect: {fileID: 1219090238}
   m_HandleRect: {fileID: 794118845}
@@ -31290,6 +31512,7 @@ MonoBehaviour:
   cc: 52
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1171908027
 MonoBehaviour:
@@ -31326,7 +31549,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 538537871}
   m_FillRect: {fileID: 597053266}
   m_HandleRect: {fileID: 538537869}
@@ -32047,6 +32270,7 @@ MonoBehaviour:
   cc: 54
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1188207745
 MonoBehaviour:
@@ -32083,7 +32307,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1774764458}
   m_FillRect: {fileID: 468217332}
   m_HandleRect: {fileID: 1774764456}
@@ -33057,6 +33281,7 @@ MonoBehaviour:
   cc: 26
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1227688349
 MonoBehaviour:
@@ -33093,7 +33318,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 424280021}
   m_FillRect: {fileID: 64360332}
   m_HandleRect: {fileID: 424280020}
@@ -33376,6 +33601,7 @@ MonoBehaviour:
   cc: 20
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1230671348
 MonoBehaviour:
@@ -33974,6 +34200,7 @@ MonoBehaviour:
   cc: 59
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1262556577
 MonoBehaviour:
@@ -34010,7 +34237,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2059193362}
   m_FillRect: {fileID: 1891857601}
   m_HandleRect: {fileID: 2059193361}
@@ -34616,6 +34843,7 @@ MonoBehaviour:
   cc: 58
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1281754440
 MonoBehaviour:
@@ -34833,6 +35061,7 @@ MonoBehaviour:
   cc: 18
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1285025794
 MonoBehaviour:
@@ -34951,6 +35180,7 @@ MonoBehaviour:
   cc: 51
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1290515149
 MonoBehaviour:
@@ -35532,6 +35762,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1307940227}
   - 114: {fileID: 1307940228}
+  - 114: {fileID: 1307940229}
   m_Layer: 0
   m_Name: worldSpinner
   m_TagString: Untagged
@@ -35571,6 +35802,19 @@ MonoBehaviour:
   speedY: 0
   speedZ: 0
   vec: {x: 0, y: 0, z: 0}
+--- !u!114 &1307940229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1307940226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32079fb197744484f8a847776bf538c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkness: 0
+  renderers: []
 --- !u!1 &1312955563
 GameObject:
   m_ObjectHideFlags: 0
@@ -35996,6 +36240,7 @@ MonoBehaviour:
   cc: 25
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1327210093
 MonoBehaviour:
@@ -36032,7 +36277,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1095077495}
   m_FillRect: {fileID: 52130781}
   m_HandleRect: {fileID: 1095077494}
@@ -36435,6 +36680,7 @@ MonoBehaviour:
   cc: 50
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1342792525
 MonoBehaviour:
@@ -36636,6 +36882,7 @@ MonoBehaviour:
   cc: 21
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1347752288
 MonoBehaviour:
@@ -36672,7 +36919,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 411910437}
   m_FillRect: {fileID: 494854225}
   m_HandleRect: {fileID: 411910435}
@@ -37450,6 +37697,7 @@ MonoBehaviour:
   cc: 53
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1376004402
 MonoBehaviour:
@@ -37486,7 +37734,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 298926303}
   m_FillRect: {fileID: 1744991927}
   m_HandleRect: {fileID: 298926302}
@@ -37982,6 +38230,7 @@ MonoBehaviour:
   cc: 50
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1391700687
 MonoBehaviour:
@@ -38018,7 +38267,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 326947632}
   m_FillRect: {fileID: 76796306}
   m_HandleRect: {fileID: 326947630}
@@ -40619,6 +40868,7 @@ MonoBehaviour:
   cc: 31
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1424594687
 MonoBehaviour:
@@ -40815,6 +41065,7 @@ MonoBehaviour:
   cc: 19
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1425485344
 MonoBehaviour:
@@ -42326,6 +42577,7 @@ MonoBehaviour:
   cc: 46
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1487084623
 MonoBehaviour:
@@ -42977,6 +43229,7 @@ MonoBehaviour:
   cc: 58
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1508038455
 MonoBehaviour:
@@ -43013,7 +43266,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1462863037}
   m_FillRect: {fileID: 2065507462}
   m_HandleRect: {fileID: 1462863036}
@@ -45016,6 +45269,7 @@ MonoBehaviour:
   cc: 22
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1587802004
 MonoBehaviour:
@@ -45220,6 +45474,7 @@ MonoBehaviour:
   cc: 54
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1597674635
 MonoBehaviour:
@@ -45407,6 +45662,7 @@ MonoBehaviour:
   cc: 56
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1600201501
 MonoBehaviour:
@@ -45443,7 +45699,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1514237646}
   m_FillRect: {fileID: 1844009552}
   m_HandleRect: {fileID: 1514237644}
@@ -46474,6 +46730,7 @@ MonoBehaviour:
   cc: 27
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1643104766
 MonoBehaviour:
@@ -47621,6 +47878,7 @@ MonoBehaviour:
   cc: 17
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1688277968
 MonoBehaviour:
@@ -49066,6 +49324,7 @@ MonoBehaviour:
   cc: 24
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1762134387
 MonoBehaviour:
@@ -49102,7 +49361,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1179854099}
   m_FillRect: {fileID: 232243749}
   m_HandleRect: {fileID: 1179854097}
@@ -49407,6 +49666,7 @@ MonoBehaviour:
   cc: 31
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1769223354
 MonoBehaviour:
@@ -49443,7 +49703,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 654158000}
   m_FillRect: {fileID: 1175930782}
   m_HandleRect: {fileID: 654157999}
@@ -51093,6 +51353,7 @@ MonoBehaviour:
   cc: 25
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1806017189
 MonoBehaviour:
@@ -53290,10 +53551,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1867930899}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_Children: []
   m_Father: {fileID: 188190707}
   m_RootOrder: 3
@@ -53999,6 +54260,7 @@ MonoBehaviour:
   cc: 21
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1894656527
 MonoBehaviour:
@@ -54504,6 +54766,7 @@ MonoBehaviour:
   cc: 48
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1917906508
 MonoBehaviour:
@@ -54540,7 +54803,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1530016496}
   m_FillRect: {fileID: 183277563}
   m_HandleRect: {fileID: 1530016495}
@@ -54892,6 +55155,7 @@ MonoBehaviour:
   cc: 55
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1929744368
 MonoBehaviour:
@@ -55203,6 +55467,7 @@ MonoBehaviour:
   cc: 16
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1933106931
 MonoBehaviour:
@@ -55669,6 +55934,7 @@ MonoBehaviour:
   cc: 46
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &1950133105
 MonoBehaviour:
@@ -55705,7 +55971,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 914869862}
   m_FillRect: {fileID: 1424130381}
   m_HandleRect: {fileID: 914869860}
@@ -57446,6 +57712,7 @@ MonoBehaviour:
   cc: 60
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2018813890
 MonoBehaviour:
@@ -58390,6 +58657,7 @@ MonoBehaviour:
   cc: 29
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2056411397
 MonoBehaviour:
@@ -58426,7 +58694,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1846850671}
   m_FillRect: {fileID: 1822630371}
   m_HandleRect: {fileID: 1846850669}
@@ -58733,6 +59001,7 @@ MonoBehaviour:
   cc: 61
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2058077600
 MonoBehaviour:
@@ -58900,6 +59169,7 @@ MonoBehaviour:
   cc: 56
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2059550017
 MonoBehaviour:
@@ -60061,6 +60331,7 @@ MonoBehaviour:
   cc: 28
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2093638900
 MonoBehaviour:
@@ -60971,6 +61242,7 @@ MonoBehaviour:
   cc: 52
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2121873936
 MonoBehaviour:
@@ -61184,6 +61456,7 @@ MonoBehaviour:
   cc: 49
   audioConnected: 0
   fft: {fileID: 0}
+  midiControlled: 0
   bin: 0
 --- !u!114 &2131232432
 MonoBehaviour:
