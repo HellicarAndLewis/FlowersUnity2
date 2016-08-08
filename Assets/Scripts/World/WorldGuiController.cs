@@ -54,4 +54,14 @@ public class WorldGuiController : MonoBehaviour
         world.SetGroundBrightness(value);
     }
 
+    public void OnBloom(float value)
+    {
+        worldCams.SetBloom(value);
+    }
+
+    public void OnGroundEmissive(float value)
+    {
+        var world = showControl.GetActiveWorld();
+        world.SetGroundEmissive(value);
+    }
 }

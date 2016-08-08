@@ -357,7 +357,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
+  m_Text: 'Bloom
 
 '
 --- !u!222 &3561609
@@ -3119,13 +3119,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 98517865}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 0.156
-  intensity: 2.5
+  intensity: 0
   blurSize: 1.78
   blurIterations: 2
   blurType: 0
@@ -3677,7 +3677,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Knob 1
+  m_Text: 'Emissive
 
 '
 --- !u!222 &108542258
@@ -3821,8 +3821,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnBloom
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7438,6 +7438,9 @@ MonoBehaviour:
   GroundBrightnessMin: 0
   GroundBrightnessMax: 1
   GroundBrightnessTarget: 0
+  EmissiveMin: 0
+  EmissiveMax: 1
+  EmissiveTarget: 0
 --- !u!1 &284766900
 GameObject:
   m_ObjectHideFlags: 0
@@ -10619,7 +10622,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
+  m_Text: 'Ground
+
 
 '
 --- !u!222 &387847528
@@ -25587,6 +25591,9 @@ MonoBehaviour:
   GroundBrightnessMin: 0
   GroundBrightnessMax: 1
   GroundBrightnessTarget: 0
+  EmissiveMin: 0
+  EmissiveMax: 0
+  EmissiveTarget: 0
 --- !u!1 &932416828
 GameObject:
   m_ObjectHideFlags: 0
@@ -26593,6 +26600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   darkness: 0
+  emissive: {r: 0, g: 0, b: 0, a: 1}
+  emissiveBright: 0
   renderers: []
 --- !u!1 &972656719
 GameObject:
@@ -40914,8 +40923,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetDeformThresholdY
+      - m_Target: {fileID: 2095687542}
+        m_MethodName: OnGroundEmissive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -45967,7 +45976,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1612162951}
   m_Layer: 0
-  m_Name: RGBShift
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57987,6 +57996,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   darkness: 0
+  emissive: {r: 1, g: 0.32941177, b: 0.12941177, a: 1}
+  emissiveBright: 0
   renderers: []
 --- !u!1 &2030231235
 GameObject:
@@ -60582,12 +60593,16 @@ MonoBehaviour:
   lerpAmount: 0.1
   primaryCam: {fileID: 98517876}
   secondaryCam: {fileID: 1425093062}
+  bloom: {fileID: 98517869}
   minHeight: 36
   maxHeight: 39
   targetHeight: 0
   minRotation: -7.6
   maxRotation: 0
   targeRotation: {x: 0, y: 0, z: 0, w: 0}
+  minBloom: 0
+  maxBloom: 2.4
+  targetBloom: 0
 --- !u!1 &2097969862
 GameObject:
   m_ObjectHideFlags: 0
