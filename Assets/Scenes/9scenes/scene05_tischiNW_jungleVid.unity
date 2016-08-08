@@ -2375,11 +2375,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 380071399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 380071403}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &380071403 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300016, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &409758505 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100022, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
@@ -2392,11 +2400,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 409758505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 409758509}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &409758509 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300022, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &487421957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,7 +2429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &487421958
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -4380,11 +4396,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 929481037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 929481041}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &929481041 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300020, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &952733077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,6 +4420,7 @@ GameObject:
   - 33: {fileID: 952733081}
   - 64: {fileID: 952733080}
   - 23: {fileID: 952733079}
+  - 114: {fileID: 952733083}
   - 114: {fileID: 952733078}
   m_Layer: 0
   m_Name: bg_plane
@@ -4412,10 +4437,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 952733077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12430b8ac2c0fa14b9b9ee6d566b5370, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movTexture: {fileID: 15200000, guid: f68cc0b523a7d294fb6a87116b51904e, type: 3}
+  _offset: {x: 0, y: -1}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 952733079}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
 --- !u!23 &952733079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4477,6 +4506,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &952733083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 952733077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638c870cac4da414fba921606d504407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_VideoLocation: 2
+  m_VideoPath: secondPetals.mov
+  m_AutoOpen: 1
+  m_AutoStart: 1
+  m_Loop: 1
+  m_Volume: 1
+  m_Muted: 1
+  m_PlaybackRate: 0.5
+  m_DebugGui: 0
+  m_Persistent: 0
+  m_StereoPacking: 0
+  m_DisplayDebugStereoColorTint: 0
+  m_FilterMode: 1
+  m_WrapMode: 1
+  m_AnisoLevel: 0
+  m_events:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: RenderHeads.Media.AVProVideo.MediaPlayerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _optionsWindows:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+    forceDirectShowApi: 0
+    forceAudioOutputDeviceName: 
+  _optionsMacOSX:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsIOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsTVOS:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsAndroid:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsPhone:
+    overridePath: 0
+    pathLocation: 2
+    path: 
+  _optionsWindowsUWP:
+    overridePath: 0
+    pathLocation: 2
+    path: 
 --- !u!1 &1058540510 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
@@ -4489,11 +4579,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1058540510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 1058540514}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &1058540514 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &1152229700
 GameObject:
   m_ObjectHideFlags: 0
@@ -4800,11 +4898,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347985479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 1347985483}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &1347985483 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300008, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
+--- !u!1 &1357091360 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100024, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
+--- !u!114 &1357091362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357091360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32079fb197744484f8a847776bf538c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkness: 1
+  renderers: []
 --- !u!1 &1703216548
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,11 +5049,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812246880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 1812246884}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &1812246884 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300012, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &1844017465 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
@@ -4943,11 +5074,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844017465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 1844017469}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &1844017469 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300014, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &1906050692 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
@@ -4960,11 +5099,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1906050692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 1906050696}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &1906050696 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300018, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &1916404003
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,11 +5284,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1985883076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 1985883080}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &1985883080 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300002, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &2010525000 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
@@ -5154,11 +5309,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2010525000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 2010525004}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &2010525004 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300006, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &2094227961 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
@@ -5171,11 +5334,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2094227961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 2094227965}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &2094227965 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300004, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
 --- !u!1 &2109547074 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100010, guid: 1fa7effe412b8ed468189efe4a4c5c30, type: 3}
@@ -5188,8 +5359,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2109547074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced04be6d07144447ad2a09c1a66843c, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d1977a52888584496b1acc7e998011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  alpha: 0.174
+  _offset: {x: 0, y: 0}
+  _scale: {x: 1, y: 1}
+  _mesh: {fileID: 2109547078}
+  _media: {fileID: 952733083}
+  _defaultTexture: {fileID: 0}
+--- !u!23 &2109547078 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300010, guid: 1fa7effe412b8ed468189efe4a4c5c30,
+    type: 3}
+  m_PrefabInternal: {fileID: 1934843558}
