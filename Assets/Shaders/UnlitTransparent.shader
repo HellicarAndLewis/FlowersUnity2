@@ -11,6 +11,7 @@
 			Tags{ "Queue" = "Transparent" "IgnoreProjector" = "True" }
 			ZWrite Off
 			Blend OneMinusDstColor One
+			//Blend SrcAlpha OneMinusSrcAlpha
 
 			SubShader
 			{ 

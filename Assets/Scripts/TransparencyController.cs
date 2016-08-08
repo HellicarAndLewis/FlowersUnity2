@@ -14,7 +14,6 @@ public class TransparencyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Color col = rend.material.GetColor("_Color");
-        rend.material.SetColor("_Color", new Color(col.r, col.g, col.b, alpha));// = new Color(1.0f, 1.0f, 1.0f, alpha);
+        rend.material.SetColor("_Color", new Color(alpha, alpha, alpha));// = new Color(1.0f, 1.0f, 1.0f, alpha);
 	}
 }
