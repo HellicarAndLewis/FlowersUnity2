@@ -4,18 +4,12 @@ using System.Collections;
 public class FlowerGardener : MonoBehaviour
 {
     public int countPerMesh = 250;
-    public int scaleMin = 6;
-    public int scaleMax = 12;
-    public bool refresh = false;
-    public GameObject flowerModel;
+    public float scaleMin = 0.5f;
+    public float scaleMax = 1;
+    public bool refresh = true;
+    public GameObject[] flowerModels;
     public GameObject flowers;
-
-    void Start()
-    {
-        
-        Refresh();
-    }
-
+    
     void Refresh()
     {
         if (flowers) DestroyImmediate(flowers);
@@ -48,7 +42,7 @@ public class FlowerGardener : MonoBehaviour
         for (int i = 0; i < n; i++)
         {
             /*
-                var triangleI = Random.Range(0, baseTriangles.Length / 3);
+            var triangleI = Random.Range(0, baseTriangles.Length - 2);
                 var vert1 = baseTriangles[triangleI];
                 var vert2 = baseTriangles[triangleI + 1];
                 var vert3 = baseTriangles[triangleI + 2];
@@ -69,12 +63,16 @@ public class FlowerGardener : MonoBehaviour
                 var position = p1 + (p1p2 * randomPos1) + (p1p32 * (1 - randomPos2));
                 */
 
+
             var position = baseVertices[Random.Range(0, baseVertices.Length)];
             position = transform.localToWorldMatrix.MultiplyPoint(position);
 
             var euler = (position - Vector3.zero).normalized;
             var rotation = Quaternion.FromToRotation(Vector3.up, euler);
+            var flowerModel = flowerModels[Random.Range(0, flowerModels.Length)];
             GameObject flowerClone = (GameObject)Instantiate(flowerModel, position, rotation);
+            //MeshRenderer renderer = flowerClone.GetComponentInChildren<MeshRenderer>();
+            //renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             flowerClone.transform.parent = flowers.transform;
             var scale = Random.Range(scaleMin, scaleMax);
             flowerClone.transform.localScale = new Vector3(scale, scale, scale);
