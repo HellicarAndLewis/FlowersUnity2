@@ -88,7 +88,11 @@ public class WorldController : MonoBehaviour
     public void Reset(float value = 0)
     {
         GetComponent<SkyboxController>().UpdateMaterial();
-        if (camTargetHeight != -999) FindObjectOfType<WorldCamerasController>().targetHeight = camTargetHeight;
+        if (camTargetHeight != -999)
+        {
+            var cam = FindObjectOfType<WorldCamerasController>();
+            if (cam) cam.targetHeight = camTargetHeight;
+        }
     }
 
     public void SetGroundSpeedNorm(float value)

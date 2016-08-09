@@ -119,6 +119,17 @@ public class ShowController : MonoBehaviour
     {
         showMode = queuedShowMode;
         int sceneIndex = (int)showMode;
+
+        if (sceneIndex > 3)
+        {
+            commonWorld.SetActive(true);
+            worldGui.Reset();
+        }
+        else
+        {
+            commonWorld.SetActive(false);
+        }
+
         if (sceneIndex > -1 && sceneIndex < (int)ShowMode.Null)
         {
             SetAllActive(false);
@@ -126,15 +137,6 @@ public class ShowController : MonoBehaviour
             scenes[sceneIndex].FadeIn();
         }
 
-        if (sceneIndex > 3)
-        {
-            worldGui.Reset();
-            commonWorld.SetActive(true);
-        }
-        else
-        {
-            commonWorld.SetActive(false);
-        }
     }
 
     private void SetAllActive(bool active)
