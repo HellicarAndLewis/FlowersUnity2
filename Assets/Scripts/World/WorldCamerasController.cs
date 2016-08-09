@@ -10,6 +10,8 @@ public class WorldCamerasController : MonoBehaviour
     public Camera primaryCam;
     public Camera secondaryCam;
     public BloomOptimized bloom;
+    public VignetteAndChromaticAberration vignette;
+    public float targetVignette = 0.2f;
 
     public float minHeight = 36;
     public float maxHeight = 42;
@@ -44,6 +46,7 @@ public class WorldCamerasController : MonoBehaviour
         secondaryCam.transform.rotation = rot;
 
         if (bloom) bloom.intensity = Mathf.Lerp(bloom.intensity, targetBloom, lerpAmount);
+        if (vignette) vignette.intensity = Mathf.Lerp(vignette.intensity, targetVignette, lerpAmount);
     }
 
     public void SetNormHeight(float height)
@@ -55,5 +58,10 @@ public class WorldCamerasController : MonoBehaviour
     public void SetBloom(float value)
     {
         targetBloom = MathUtils.Map(value, 0, 1, minBloom, maxBloom, true);
+    }
+
+    public void SetVignette(float value)
+    {
+        targetVignette = value;
     }
 }
